@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<h1>{{ full_name }}</h1>
+    <img src="{% static 'images/image.jpeg' %}" alt="">
+    <img src="{% static 'images/home.jpg' %}" alt="">
+<a href="{% url 'logout' %}">Logout</a>
+
+{% endblock content %}
