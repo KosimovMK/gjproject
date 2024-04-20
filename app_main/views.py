@@ -70,12 +70,11 @@ def teacher_update(request, id):
 
     if request.method == 'POST':
 
-        teacher.first_name = request.POST.get('first_name', '')
-        teacher.last_name = request.POST.get('last_name', '')
-        teacher.email = request.POST.get('email', '')
-        teacher.username = request.POST.get('username', '')
+        teacher.first_name = request.POST.get('first_name')
+        teacher.last_name = request.POST.get('last_name')
+        teacher.email = request.POST.get('email')
+        teacher.username = request.POST.get('username')
 
-        teacher.save()
 
         return redirect('teacher_detail', id=id)
 
